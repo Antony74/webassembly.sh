@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "npx run-s build:wasm-terminal build:wasm-transformer",
-    "build": "npx run-s build:wasm-terminal build:wasm-transformer build:preact",
+    "build": "rimraf build && npx run-s build:wasm-terminal build:wasm-transformer build:preact",
     "build:preact": "npx preact build --no-prerender",
     "build:wasm-terminal": "npx run-s build:wasm-terminal:xterm build:wasm-terminal:workers",
     "build:wasm-terminal:xterm": "npx cpy 'node_modules/@wasmer/wasm-terminal/lib/xterm/**/*' src/assets/wasm-terminal",
@@ -46,6 +46,7 @@
     "npm-run-all": "^4.1.5",
     "preact-cli": "^3.0.0-rc.5",
     "replace": "^1.1.1",
+    "rimraf": "^3.0.2",
     "serve": "^11.1.0"
   },
   "dependencies": {

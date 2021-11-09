@@ -24,8 +24,9 @@
     "build:wasm-terminal:workers": "npx cpy 'node_modules/@wasmer/wasm-terminal/lib/workers/**/*' src/assets/wasm-terminal",
     "build:wasm-transformer": "npx cpy 'node_modules/@wasmer/wasm-transformer/lib/wasm-transformer.wasm' src/assets/wasm-transformer",
     "dev": "npx preact watch -p 8080",
-    "serve": "npx serve -p 8080 build/",
-    "lint": "npx eslint src"
+    "express": "node express.js",
+    "lint": "npx eslint src",
+    "serve": "npx serve -p 8080 build/"
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor"
@@ -40,6 +41,7 @@
     "cpy-cli": "^2.0.0",
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
+    "express": "^4.17.1",
     "if-env": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "preact-cli": "^3.0.0-rc.5",

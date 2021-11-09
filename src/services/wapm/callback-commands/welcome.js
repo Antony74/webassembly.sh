@@ -34,7 +34,11 @@ ${bold}WebAssembly.sh${reset} v${wasmShVersion}
 Powered by Wasmer-JS
     @wasmer/wasm-terminal v${wasmerWasmTerminalVersion}
 
-QUICK START:
+METAMATH QUICK START:
+    • curl https://raw.githubusercontent.com/metamath/set.mm/develop/set.mm -o set.mm
+    • metamath set.mm
+
+WEBASSEMBLY.SH QUICK START:
     • Try a command: \`cowsay hello\`.
     • Run a JS Engine in Wasm: \`quickjs\`.
     • Manage Wasm modules: \`wapm\`. 

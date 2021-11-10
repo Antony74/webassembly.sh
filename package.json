@@ -26,7 +26,7 @@
     "dev": "npx preact watch -p 8080",
     "express": "node express.js",
     "lint": "npx eslint src",
-    "s3-sync": "aws s3 sync ./build s3://akb.me.uk/webassembly.sh",
+    "s3-sync": "aws s3 sync ./build s3://webassembly.sh-interactive",
     "serve": "npx serve -p 8080 build/"
   },
   "eslintConfig": {

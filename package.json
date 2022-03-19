@@ -16,13 +16,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npx run-s build:wasm-terminal build:wasm-transformer",
-    "build": "npx run-s build:wasm-terminal build:wasm-transformer build:preact",
+    "alt-build": "node build.js",
+    "postinstall": "npm run build",
+    "build": "node build.js && build:preact",
     "build:preact": "npx preact build --no-prerender",
-    "build:wasm-terminal": "npx run-s build:wasm-terminal:xterm build:wasm-terminal:workers",
-    "build:wasm-terminal:xterm": "npx cpy 'node_modules/@wasmer/wasm-terminal/lib/xterm/**/*' src/assets/wasm-terminal",
-    "build:wasm-terminal:workers": "npx cpy 'node_modules/@wasmer/wasm-terminal/lib/workers/**/*' src/assets/wasm-terminal",
-    "build:wasm-transformer": "npx cpy 'node_modules/@wasmer/wasm-transformer/lib/wasm-transformer.wasm' src/assets/wasm-transformer",
     "dev": "npx preact watch -p 8080",
     "serve": "npx serve -p 8080 build/",
     "lint": "npx eslint src"
@@ -37,7 +34,7 @@
     "@babel/helper-compilation-targets": "^7.15.4",
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "copyfiles": "^2.1.1",
-    "cpy-cli": "^2.0.0",
+    "cpy": "^9.0.1",
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
@@ -55,6 +52,7 @@
     "preact": "^8.5.2",
     "preact-compat": "^3.17.0",
     "preact-render-to-string": "^4.1.0",
+    "resolve": "^1.22.0",
     "save-file": "^2.3.1",
     "text-table": "^0.2.0"
   }

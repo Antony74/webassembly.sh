@@ -1,7 +1,9 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const resolve = promisify(require('resolve'));
-const cpy = require('cpy');
+import fs from 'fs';
+import { promisify } from 'util';
+import rawResolve from 'resolve';
+import cpy from 'cpy';
+
+const resolve = promisify(rawResolve);
 
 const pkgDir = async (name) => {
 	let foundDir;

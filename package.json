@@ -16,7 +16,6 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "alt-build": "node build.js",
     "postinstall": "npm run build",
     "build": "node build.js && npm run build:preact",
     "build:preact": "npx preact build --no-prerender",

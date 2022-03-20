@@ -18,7 +18,7 @@
   "scripts": {
     "alt-build": "node build.js",
     "postinstall": "npm run build",
-    "build": "node build.js && build:preact",
+    "build": "node build.js && npm run build:preact",
     "build:preact": "npx preact build --no-prerender",
     "dev": "npx preact watch -p 8080",
     "serve": "npx serve -p 8080 build/",
@@ -34,7 +34,7 @@
     "@babel/helper-compilation-targets": "^7.15.4",
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "copyfiles": "^2.1.1",
-    "cpy": "^9.0.1",
+    "cpy": "^8.1.2",
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
